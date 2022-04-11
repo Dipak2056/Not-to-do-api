@@ -1,0 +1,15 @@
+{
+  "name": "not-to-do-api",
+  "version": "1.0.0",
+  "description": "This is the api for our react not to do list",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Dipak Paudel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
