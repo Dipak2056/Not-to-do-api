@@ -4,13 +4,13 @@ const router = express.Router();
 const fakeTasks = [];
 //Api end points
 //task api end points
-router.get("/api/v1/task", (req, res) => {
+router.get("/", (req, res) => {
   //replace the tasks with the real ones from databases
 
   res.json({ message: "you made a get call", tasks: fakeTasks });
 });
 
-router.post("/api/v1/task", (req, res) => {
+router.post("/", (req, res) => {
   fakeTasks.push(req.body);
   console.log(req.body);
   res.json({
@@ -19,7 +19,7 @@ router.post("/api/v1/task", (req, res) => {
   });
 });
 
-router.delete("/api/v1/task", (req, res) => {
+router.delete("/", (req, res) => {
   res.json({
     message: "you made a delete call",
   });
