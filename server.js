@@ -8,7 +8,8 @@ app.use(express.json());
 //load the modules
 import taskRouter from "./src/routers/taskRouter.js";
 
-app.use("/", taskRouter);
+app.use("/api/v1/task", taskRouter);
+
 app.use("/", (request, response) => {
   const person = {
     name: "dipak",
