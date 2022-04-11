@@ -6,8 +6,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //load the modules
-import router from "./src/routers/taskRouter.js";
+import taskRouter from "./src/routers/taskRouter.js";
 
+app.use("/", taskRouter);
 app.use("/", (request, response) => {
   const person = {
     name: "dipak",
