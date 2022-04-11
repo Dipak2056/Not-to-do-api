@@ -24,3 +24,5 @@ router.delete("/api/v1/task", (req, res) => {
     message: "you made a delete call",
   });
 });
+
+export default router;
