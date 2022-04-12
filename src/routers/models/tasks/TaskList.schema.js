@@ -5,4 +5,5 @@ const TaskListSchema = new mongoose.Schema({
   hr: { type: Number, required: true },
 });
 
-mongoose.model(Task, TaskListSchema);
+const TaskList = mongoose.model(Task, TaskListSchema);
+export default TaskList;
