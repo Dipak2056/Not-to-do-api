@@ -2,6 +2,9 @@
 import express from "express";
 const app = express();
 const PORT = 8000;
+//to connect to mongo db
+import mongoClient from "./src/routers/config/db.js";
+mongoClient();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
