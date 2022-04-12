@@ -5,7 +5,7 @@ GET http://localhost:8000/api/v1/task
 POST http://localhost:8000/api/v1/task
 Content-Type: application/json
 
-{"task":"boil TV","hr":1}
+{"task":"boiling TV","hr":1}
 
 ###
 DELETE  http://localhost:8000/api/v1/task

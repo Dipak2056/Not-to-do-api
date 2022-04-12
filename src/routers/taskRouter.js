@@ -1,4 +1,5 @@
 import express from "express";
+import { insertTask } from "./models/tasks/TaskList.model.js";
 const router = express.Router();
 
 const fakeTasks = [];
@@ -10,9 +11,10 @@ router.get("/", (req, res) => {
   res.json({ message: "you made a get call", tasks: fakeTasks });
 });
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   fakeTasks.push(req.body);
-  console.log(req.body);
+  const result = await insertTask(req.body);
+  console.log(result);
   res.json({
     status: "Success",
     message: "you made a post call",
