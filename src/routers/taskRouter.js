@@ -6,7 +6,6 @@ import {
   deleteTask,
 } from "./models/tasks/TaskList.model.js";
 
-const fakeTasks = [];
 //Api end points
 //task api end points
 router.get("/", async (req, res) => {

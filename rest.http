@@ -1,14 +1,16 @@
 ###get the api end point
 GET http://localhost:8000/
 
-###fetch all the taasks api
+###fetch all the tasks api
 GET http://localhost:8000/api/v1/task
 
 ###
 POST http://localhost:8000/api/v1/task
 Content-Type: application/json
 
-{"task":"her","hr":1}
+{"user_id":"625e3774f44cf27df180025e",
+"task":"hefr",
+"hr":1}
 
 ###
 DELETE  http://localhost:8000/api/v1/task/625e081f1cd2b4518ea174af
