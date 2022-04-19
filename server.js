@@ -33,3 +33,5 @@ app.listen(PORT, (error) =>
     ? console.log(error)
     : console.log(`server is running at http://localhost:${PORT}`)
 );
+
+// i am practicing for user-api-2 as well

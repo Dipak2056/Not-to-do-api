@@ -4,11 +4,17 @@ import {
   returnUserDetail,
   postUseDetail,
   deleteUserDetail,
+  returnAUserDetail,
+  updateUserPassword,
 } from "./models/user-api/userDetails.model.js";
 
 //to call the api end point
-router.get("/", async (req, res) => {
-  const result = await returnUserDetail();
+//this is going to make the request for all the data to make it available for the specific user we use
+//id as a parameter and use ternary operator to fetch
+router.get("/:_id?", async (req, res) => {
+  const { _id } = req.params;
+
+  const result = _id ? await returnAUserDetail(_id) : await returnUserDetail();
   res.json({ message: "you made a get call", userDetail: result });
   console.log(result);
 });
@@ -35,7 +41,7 @@ router.delete("/:_id", async (req, res) => {
     }
     res.json({
       status: "delete",
-      message: "deleted",
+      message: "no user found to be deleted",
     });
   } catch (error) {
     res.json({
@@ -43,5 +49,10 @@ router.delete("/:_id", async (req, res) => {
       message: error.message,
     });
   }
+});
+router.patch("/", async (req, res) => {
+  console.log(req.body);
+  const result = await updateUserPassword(req.body);
+  res.json({ status: "success", result }, { new: true });
 });
 export default router;

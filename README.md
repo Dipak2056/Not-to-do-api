@@ -7,14 +7,15 @@ Here is the link to front end app [.....]
 
 All the api will be following the `{rootUrl}/api/v1/` format.
 
-`../api/v1/task` resource will provide all task related api.
+`../api/v1/user2` resource will provide all user2 related api.
 | # | Method | Path | Description |
 |---|--------|------| ----------- |
-| 1.| `GET` | `/task` | this will return al the tasks available in the database |
-| 2.| `POST` | `/task` | send task object to api and store in the database |
-| 3.| `DELETE` | `/task` | it expects ID of the task and will delete a task from database |
+| 1.| `GET` | `/user2` | this will return al the user2s available in the database |
+| 2.| `POST` | `/user2` | send user2 object to api and store in the database |
+| 3.| `DELETE` | `/user2` | it expects ID of the user2 and will delete a user2 from database |
+| 4.|`PATCH` | `/user2`| it expects the ID of the user2 and update in the database |
 
-`../api/v1/user` resource will provide all user related api
+`../api/v1/user2` resource will provide all user related api
 
 ### User API
 

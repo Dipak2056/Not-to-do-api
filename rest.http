@@ -17,6 +17,10 @@ DELETE  http://localhost:8000/api/v1/task/625e081f1cd2b4518ea174af
 ###to make the request to user-api
 GET http://localhost:8000/api/v1/user
 
+###to make the request for the single user
+GET http://localhost:8000/api/v1/user/625e3774f44cf27df180025e
+
+
 ###to make the post to the user
 POST http://localhost:8000/api/v1/user
 Content-Type: application/json
@@ -27,3 +31,14 @@ Content-Type: application/json
 
 ###to delete the user
 DELETE http://localhost:8000/api/v1/user/625e2cb76db323a09d677dea
+
+###to update the details
+//we use patch to update few details
+
+PATCH http://localhost:8000/api/v1/user
+Content-Type: application/json
+
+{
+    "_id":"625e3774f44cf27df180025e",
+    "newPassword":"abc4"
+}
