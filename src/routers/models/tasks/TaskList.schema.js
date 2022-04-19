@@ -9,6 +9,7 @@ const TaskListSchema = new mongoose.Schema({
     maxlength: 30,
   },
   hr: { type: Number, required: true },
+  
 });
 
 const TaskList = mongoose.model("Task", TaskListSchema);

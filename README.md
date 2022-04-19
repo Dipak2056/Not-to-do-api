@@ -17,3 +17,17 @@ All the api will be following the `{rootUrl}/api/v1/` format.
 `../api/v1/user` resource will provide all user related api
 
 ### User API
+
+crete user API for the following features
+
+1. create user with name, email and password
+2. get all the users
+3. get single user
+4. delete a user
+5. update a user
+
+do:
+
+1. create new branch -git branch user-api
+2. switch branch - git checkout user-api
+3. start writing code
