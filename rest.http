@@ -1,3 +1,6 @@
+###get the api end point
+GET http://localhost:8000/
+
 ###fetch all the taasks api
 GET http://localhost:8000/api/v1/task
 
@@ -5,7 +8,7 @@ GET http://localhost:8000/api/v1/task
 POST http://localhost:8000/api/v1/task
 Content-Type: application/json
 
-{"task":"boiling TV","hr":1}
+{"task":"her","hr":1}
 
 ###
-DELETE  http://localhost:8000/api/v1/task
+DELETE  http://localhost:8000/api/v1/task/625e081f1cd2b4518ea174af

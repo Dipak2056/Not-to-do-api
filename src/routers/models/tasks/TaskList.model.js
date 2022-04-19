@@ -5,5 +5,11 @@ export const insertTask = (obj) => {
   return TaskListSchema(obj).save();
 };
 //read all task
+export const returnTask = () => {
+  return TaskListSchema.find();
+};
 
 //delete a task
+export const deleteTask = (_id) => {
+  return TaskListSchema.findByIdAndDelete(_id);
+};
