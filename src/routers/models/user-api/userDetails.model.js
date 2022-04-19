@@ -19,7 +19,13 @@ export const deleteUserDetail = (_id) => {
 
 //update user password
 export const updateUserPassword = ({ _id, newPassword }) => {
-  return userListSchema.findByIdAndUpdate(_id, {
-    password: newPassword,
-  });
+  return userListSchema.findByIdAndUpdate(
+    _id,
+    {
+      password: newPassword,
+    },
+    {
+      new: true,
+    }
+  );
 };

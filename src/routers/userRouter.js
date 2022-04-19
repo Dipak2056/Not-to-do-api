@@ -53,6 +53,6 @@ router.delete("/:_id", async (req, res) => {
 router.patch("/", async (req, res) => {
   console.log(req.body);
   const result = await updateUserPassword(req.body);
-  res.json({ status: "success", result }, { new: true });
+  res.json({ status: "success", result });
 });
 export default router;
